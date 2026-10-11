@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+}
+.ALL{
+    background-color: #F1F1F1;
+    width: 1440px;
+    height: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+.SpectatorTitle{
+    text-align: center;
+    width: 630px;
+    height: 45px;
+    top: 110px;
+    left: 405px;
+    position: absolute;
+}
+.SpectatorTitle h1 {
+    font-size: 50px;
+    font-weight: 700;
+    font-style: Bold;
+    font-family: Poppins;
+    color: #36476D;
+}
+.SpectatorImage{
+    position: absolute;
+    width: 263px;
+    height: 55px;
+    top: 55px;
+    left: 73px;
+}
+.AddSource{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #AFD7FA;
+    width: 1320px;
+    height: 143px;
+    top: 230px;
+    left: 73px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+}
+.SourceText{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: white;
+    gap: 16px;
+    font-weight: 600;
+}
+.ADD{
+    width: 166px;
+    height: 57px;
+    border-radius: 20px;
+    border: none;
+    background-color: #56C854;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+input[type="text"]{
+    width: 306px;
+    height: 50px;
+    background-color: white;
+    font-size: 18px;
+    padding: 0 14px;
+    outline: none;
+    border: none;
+
+}
+/*Source List Items*/
+.OBox{
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin-top: 440px;
+    margin-left: 86px;
+    width: 1293px;
+    height: 367px;
+}
+.OBox li {
+    border-radius: 30px;
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 121px;
+}
+.Num{
+    font-family: 'Poppins';
+    width: 30px;
+    height: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    vertical-align: middle;
+    color: #36476D;  
+    align-content: center;
+}
+.Name{
+    font-family: 'Poppins';
+    width: 290px;
+    height: 45px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #36476D;
+    vertical-align: middle;
+    align-content: center;
+}
+.Email{
+    font-family: 'Poppins';
+    color: #828EA6;
+    width: 413px;
+    height: 45px;
+    font-size: 32px;
+    font-weight: 400;
+    vertical-align: middle;
+    align-content: center;
+}
+.Delete{
+    color: white;
+    background-color: #FF7676;
+    font-size: 30px;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    width: 166px;
+    height: 57px;
+    align-content: center;
+    font-weight: 600;
+    border: none;
+}
