@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #F1F1F1;
+}
+
+body {
+  background-color: #F1F1F1;
+}
+
+.ALL {
+  background-color: #F1F1F1;
+  width: 1440px;
+  min-height: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.SpectatorTitle {
+  width: 630px;
+  margin: 80px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.SpectatorTitle h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  color: #36476D;
+}
+
+.SpectatorImage {
+  width: 263px;
+  height: 55px;
+  margin: 55px 0 0 73px;
+  position: relative;
+}
+
+.AddSource {
+  width: 1320px;
+  height: 143px;
+  margin: 35px 0 0 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #AFD7FA;
+  border-radius: 30px;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.SourceText {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.ADD {
+  width: 166px;
+  height: 57px;
+  border: none;
+  border-radius: 20px;
+  background-color: #56C854;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  width: 306px;
+  height: 50px;
+  padding: 0 14px;
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+/* this is the important part */
+.OBox {
+  list-style: none;
+  width: 1293px;
+  margin: 50px 0 0 86px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+}
+
+.OBox li {
+  background-color: white;
+  border-radius: 30px;
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  gap: 121px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.Num {
+  width: 30px;
+  height: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #36476D;
+  align-content: center;
+}
+
+.Name {
+  width: 290px;
+  height: 45px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #36476D;
+  align-content: center;
+}
+
+.Email {
+  width: 413px;
+  height: 45px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #828EA6;
+  align-content: center;
+}
+
+.Delete {
+  width: 166px;
+  height: 57px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FF7676;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  align-content: center;
+}
