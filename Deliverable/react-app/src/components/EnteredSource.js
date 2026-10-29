@@ -1,15 +1,26 @@
-function EnteredSource({id, name, email}) {
-    return (
-        <div>
-            <ul class = "OBox">
-                <li> 
-                    <span class = "Num">{id}</span>
-                    <span class="Name">{name}</span>
-                    <span class = "Email">{email}</span>
-                    <button class = "Delete" type="button">DELETE</button>
-                </li>
-            </ul>
-        </div>
-    );
+import React from 'react';
+
+function EnteredSource({ sources, onDeleteSource }) {
+  return (
+    <div>
+      <ul className="OBox">
+        {sources.map((source, index) => (
+          <li key={source.id}>
+            <span className="Num">{index + 1}</span>
+            <span className="Name">{source.name}</span>
+            <span className="Email">{source.email}</span>
+            <button
+              className="Delete"
+              type="button"
+              onClick={() => onDeleteSource(source.id)}
+            >
+              DELETE
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
+
 export default EnteredSource;

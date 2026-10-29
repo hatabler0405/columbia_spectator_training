@@ -137,5 +137,6 @@ input[type="text"]{
     height: 57px;
     align-content: center;
     font-weight: 600;
+    cursor: pointer;
     border: none;
 }
