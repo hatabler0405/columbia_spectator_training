@@ -8,25 +8,49 @@ function App() {
   const [sources, setSources] = useState([]);
 
   useEffect(() => {
-    const initialSources = [
-      { id: 1, name: "Presbo", email: "presbo@columbia.edu" },
-      { id: 2, name: "John Jay Mouse", email: "mouse@columbia.edu" },
-      { id: 3, name: "Water Bottle Man", email: "flipper@columbia.edu" }
-    ];
-    setSources(initialSources);
+    fetch('http://localhost:8000/getAll')
+      .then((res) => res.json())
+      .then((data) => setSources(data))
+      .catch((err) => console.error('Error fetching sources:', err));
   }, []);
 
-  const handleAddSource = (name, email) => {
-    const newSource = {
-      id: sources.length+1, 
-      name: name,
-      email: email
-    };
-    setSources((prevSources) => [...prevSources, newSource]);
+  const handleAddSource = async (name, email) => {
+    try{
+      const response = await fetch('http://localhost:8000/create', {
+        method: "POST",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email }),
+      });
+      if(response.ok){
+        const savedSource = await response.json();
+        setSources((prevSources) => [...prevSources, savedSource]);
+      } else {
+        console.error('Failed to add source to the database');
+      }
+    } catch (err) {
+      console.error('Error adding source:', err);
+    }
   };
 
-  const handleDeleteSource = (id) => {
-    setSources((prevSources) => prevSources.filter((source) => source.id !== id));
+  const handleDeleteSource = async (id) => {
+    try{
+      const response = await fetch(`http://localhost:8000/delete/${id}`, {
+        method: "DELETE",
+        headers:{
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ id }),
+      });
+      if(response.ok){
+        setSources((prevSources) => prevSources.filter((source) => source.id !== id));
+      } else {
+        console.error('Failed to delete source from the database');
+      }
+    } catch (err) {
+      console.error('Error deleting source:', err);
+    }
   };
 
   return (
