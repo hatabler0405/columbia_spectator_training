@@ -19,7 +19,5 @@ def delete_source(db: Session, source_id: int):
    db.commit()
    return {"message": "Source deleted successfully"}
 
-def get_all_sources(db: Session):
-   return db.query(models.SpectatorSource).all()
 
 

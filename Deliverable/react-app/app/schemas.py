@@ -10,7 +10,4 @@ class SpectatorSource(SpectatorSourceBase):
         orm_mode = True
 
 class SpectatorSourceCreate(SpectatorSourceBase):   
-    name: str
-    email: str
-    class Config:
-        orm_mode = True
+    pass
