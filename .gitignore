@@ -1,0 +1,5 @@
+.DS_Store
+Training/
+.env*
+./Deliverable/react-app/.gitignore
+
